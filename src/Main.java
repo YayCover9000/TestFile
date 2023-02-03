@@ -25,20 +25,21 @@ public class Main {
 
     public class arrayTestaufruf {
         public static int arraysTest() {
-            int array1[] = new int[11];
-            int array2[] = new int[11];
+            int array1[] = new int[10];
+            int array2[] = new int[10];
             int i;
             int j;
             int middleman = 10;
+            int lanege = array2.length - 1;
             int printer = 0;
-            for (i = 0; i < middleman;i++) {
+            for (i = 0; i < 10; i++) {
                 array1[i] = i;
 
-                for(j = 10; j > 0;j--){
+                for(j = lanege; j > -1;j--){
                 array2[j] = array1[i];
 
                 }
-                middleman = middleman - 1;
+                lanege = lanege - 1;
             }
             for (int e: array1){
                 System.out.println("Array1: " + e);
